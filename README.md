@@ -74,6 +74,7 @@ NgWizard is a simple step wizard for Angular. This is a very simple wizard at th
 ### ngWizard
 This is the main container for the wizard. 
 **Selector:** `<ngWizard></ngWizard>`
+
 |Parameter|In/Out |Type|Description|
 |--|--|--|--|
 |nextText|IN|string|Text to display on the button to step to the next wizard step. (Default: Next)|
@@ -85,6 +86,7 @@ This is the main container for the wizard.
 ### ngWizardStep
 **Selector:**`<ngWizardStep></ngWizardStep>`
 Container to house the step controls and HTML. 
+
 |Parameter|In/Out |Type|Description|
 |--|--|--|--|
 |title|IN|string|The title of the step displayed on the header region (Default: Null)|
