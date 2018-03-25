@@ -2,14 +2,8 @@
   "name": "@rolesvillesoftware/ng-wizard",
   "version": "1.0.4",
   "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
+  "scripts": {},
+  "main": "index.js",
   "private": false,
   "dependencies": {
     "@angular/common": "^5.2.0",
