@@ -8,8 +8,8 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
   '<div><div>{{ currentStep?.title }}</div><div></div></div>' +
   '<div><ng-content></ng-content></div>' +
   '<div>' +
-  '<div><button class="back" type="button" (click)="prevClick()" [hidden]="!showBack()" [disabled]="!this.currentStep.canMoveBack">{{ backText }}</button></div>' +
-  '<div><button class="next" type="button" (click)="nextClick()" [disabled]="!this.currentStep.canMoveNext">{{ doneNextText }}</button></div>' +
+  '<div><button class="back" type="button" (click)="prevClick()" [hidden]="!showBack()" [disabled]="!this.currentStep?.canMoveBack">{{ backText }}</button></div>' +
+  '<div><button class="next" type="button" (click)="nextClick()" [disabled]="!this.currentStep?.canMoveNext">{{ doneNextText }}</button></div>' +
   '</div>' +
   '</div>',
   styles: [
