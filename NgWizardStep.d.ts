@@ -1,4 +1,4 @@
-import { NgWizardComponent } from './ng-wizard.component';
+import { NgWizardComponent } from './NgWizardComponent';
 export declare class NgWizardStepComponent {
     title: any;
     canMoveNext: boolean;

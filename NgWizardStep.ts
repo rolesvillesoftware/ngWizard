@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {NgWizardComponent} from './ng-wizard.component';
+import {NgWizardComponent} from './NgWizardComponent';
 
 @Component({
   selector: 'ngWizardStep',

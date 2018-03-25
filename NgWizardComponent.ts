@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {NgWizardStepComponent} from './ng-wizard-step.component';
-import {StepEvent} from './StepEvent';
+import {NgWizardStepComponent} from './NgWizardStep';
+import {NgWizardStepEvent} from './NgWizardStepEvent';
 
 @Component({
   selector: 'ngWizard',
@@ -32,8 +32,8 @@ export class NgWizardComponent {
   @Input() doneText = 'Done';
   @Input() backText = 'Back';
 
-  @Output() stepChange = new EventEmitter<StepEvent>();
-  @Output() done = new EventEmitter<StepEvent>();
+  @Output() stepChange = new EventEmitter<NgWizardStepEvent>();
+  @Output() done = new EventEmitter<NgWizardStepEvent>();
 
   private activeStep = -1;
   private steps: NgWizardStepComponent[] = new Array<NgWizardStepComponent>(0);
@@ -71,12 +71,12 @@ export class NgWizardComponent {
     });
   }
 
-  private callEvent(prevStep: number, event: EventEmitter<StepEvent>) {
+  private callEvent(prevStep: number, event: EventEmitter<NgWizardStepEvent>) {
     if (prevStep === this.activeStep) {
       return;
     }
 
-    const eventArgs = Object.assign(new StepEvent(), {
+    const eventArgs = Object.assign(new NgWizardStepEvent(), {
       previousStep: prevStep >= 0 ? prevStep : null,
       currentStep: this.activeStep >= 0 ? this.activeStep : 0,
       previousTarget: prevStep >= 0 && prevStep === this.lastStep ? this.steps[prevStep] : null,

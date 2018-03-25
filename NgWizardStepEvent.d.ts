@@ -1,6 +1,6 @@
-import { NgWizardStepComponent } from './ng-wizard-step.component';
-import { NgWizardComponent } from './ng-wizard.component';
-export declare class StepEvent {
+import { NgWizardStepComponent } from './NgWizardStep';
+import { NgWizardComponent } from './NgWizardComponent';
+export declare class NgWizardStepEvent {
     previousStep: number;
     currentStep: number;
     previousTarget: NgWizardStepComponent;

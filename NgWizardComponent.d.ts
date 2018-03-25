@@ -1,12 +1,12 @@
 import { EventEmitter } from '@angular/core';
-import { NgWizardStepComponent } from './ng-wizard-step.component';
-import { StepEvent } from './StepEvent';
+import { NgWizardStepComponent } from './NgWizardStep';
+import { NgWizardStepEvent } from './NgWizardStepEvent';
 export declare class NgWizardComponent {
     nextText: string;
     doneText: string;
     backText: string;
-    stepChange: EventEmitter<StepEvent>;
-    done: EventEmitter<StepEvent>;
+    stepChange: EventEmitter<NgWizardStepEvent>;
+    done: EventEmitter<NgWizardStepEvent>;
     private activeStep;
     private steps;
     readonly lastStep: number;
