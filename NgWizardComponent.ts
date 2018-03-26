@@ -14,7 +14,7 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
   '</div>',
   styles: [
     '@import url("https://fonts.googleapis.com/css?family=Lato");',
-    '.rsWizardMain { display: flex; flex-direction: column; font-family: "Lato", sans-serif; background: #fff; font-size: 1em; border: 1px solid #C7CDD1; box-shadow: 0 1px 3px 0 rgba(0 0 0 0.15); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); min-height: 41%; max-height: 65%; min-width: 41%; max-width: 65% }',
+    '.rsWizardMain { display: flex; flex-direction: column; font-family: "Lato", sans-serif; background: #fff; font-size: 1em; border: 1px solid #C7CDD1; box-shadow: 0 1px 3px 0 rgba(0 0 0 0.15); position: fixed; z-index: 999999; top: 50%; left: 50%; transform: translate(-50%, -50%); min-height: 41%; max-height: 65%; min-width: 41%; max-width: 65% }',
     '.rsWizardMain>div { flex: 1; overflow: hidden; overflow-y: auto; }',
     '.rsWizardMain>div:first-child { flex: 0; font-size: 20px; padding: 3.99vh 3.18vw; color: #2D3B45; font-weight: bold; background: #f2f2f2; border: 1px solid #C7CDD1; border-radius: 3px 3px 0 0; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15); }',
     '.rsWizardMain>div:first-child>div { width: 50%; }',
