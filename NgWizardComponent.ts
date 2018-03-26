@@ -18,6 +18,7 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
     '.rsWizardMain>div { flex: 1; overflow: hidden; overflow-y: auto; }',
     '.rsWizardMain>div:first-child { flex: 0; font-size: 20px; padding: 3.99vh 3.18vw; color: #2D3B45; font-weight: bold; background: #f2f2f2; border: 1px solid #C7CDD1; border-radius: 3px 3px 0 0; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15); }',
     '.rsWizardMain>div:first-child>div { width: 50%; }',
+    '.rsWizardMain>div:nth-child(2) { padding: 23px; }',
     '.rsWizardMain>div:last-child { flex: 0; padding: 3.42vh 3.36vw; border-top: 1px solid #efefef; }',
     '.rsWizardMain>div:last-child>div { display: inline-block; width: 50%; text-align: center }',
     '.rsWizardMain>div:last-child>div:first-child { text-align: left;}',
