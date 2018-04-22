@@ -8,8 +8,8 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
   selector: 'ngWizard',
   template: '<div class="rsWizardMain rsWizardMainOverride">' +
   ' <div>' +
-  '   <div>{{ currentStep?.title }}</div><div>' +
-  '  <div *ngIf="canCancel" class="cancelX" (click)="cancelWizard()" title="Click to cancel wizard" ></div>' +
+  '  <div>{{ currentStep?.title }}</div>' +
+  '  <div *ngIf="canCancel" class="cancelX" (click)="cancelWizard()" title="Click to cancel wizard" >X</div>' +
   ' </div>' +
   '</div>' +
   '<div><ng-content></ng-content></div>' +
