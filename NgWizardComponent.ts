@@ -6,18 +6,7 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
 
 @Component({
   selector: 'ngWizard',
-  template:
-  '<div class="rsWizardMain rsWizardMainOverride">' +
-  ' <div>' +
-  '   <div>{{ currentStep?.title }}</div>' +
-  '   <div *ngIf="canCancel" class="cancelX" (click)="cancelWizard()" title="Click to cancel wizard" >X</div>' +
-  ' </div>' +
-  ' <div><ng-content></ng-content></div>' +
-  ' <div>' +
-  '   <div><button class="back" type="button" (click)="prevClick()" [hidden]="!showBack()" [disabled]="!this.currentStep?.canMoveBack">{{ backText }}</button></div>' +
-  '   <div><button class="next" type="button" (click)="nextClick()" [disabled]="!this.currentStep?.canMoveNext">{{ doneNextText }}</button></div>' +
-  ' </div>' +
-  '</div>',
+  templateUrl: './NgWizardTemplate.html',
   styles: [
     '@import url("https://fonts.googleapis.com/css?family=Lato");',
     '.rsWizardMain { display: flex; flex-direction: column; font-family: "Lato", sans-serif; background: #fff; font-size: 1em; border: 1px solid #C7CDD1; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15); position: fixed; z-index: 9999999; top: 50%; left: 50%; transform: translate(-50%, -50%); min-height: 41%; max-height: 65%; min-width: 41%; max-width: 65% }',
