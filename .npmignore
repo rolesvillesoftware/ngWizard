@@ -6,4 +6,3 @@
 tsconfig.json
 tslint.json
 .editorconfig
-!NgWizardTemplate.html
