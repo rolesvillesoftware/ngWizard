@@ -6,17 +6,17 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
 
 @Component({
   selector: 'ngWizard',
-  template: '<div class="rsWizardMain rsWizardMainOverride">' +
+  template:
+  '<div class="rsWizardMain rsWizardMainOverride">' +
   ' <div>' +
-  '  <div>{{ currentStep?.title }}</div>' +
-  '  <div *ngIf="canCancel" class="cancelX" (click)="cancelWizard()" title="Click to cancel wizard" >X</div>' +
+  '   <div>{{ currentStep?.title }}</div>' +
+  '   <div *ngIf="canCancel" class="cancelX" (click)="cancelWizard()" title="Click to cancel wizard" >X</div>' +
   ' </div>' +
-  '</div>' +
-  '<div><ng-content></ng-content></div>' +
-  '<div>' +
-  '<div><button class="back" type="button" (click)="prevClick()" [hidden]="!showBack()" [disabled]="!this.currentStep?.canMoveBack">{{ backText }}</button></div>' +
-  '<div><button class="next" type="button" (click)="nextClick()" [disabled]="!this.currentStep?.canMoveNext">{{ doneNextText }}</button></div>' +
-  '</div>' +
+  ' <div><ng-content></ng-content></div>' +
+  ' <div>' +
+  '   <div><button class="back" type="button" (click)="prevClick()" [hidden]="!showBack()" [disabled]="!this.currentStep?.canMoveBack">{{ backText }}</button></div>' +
+  '   <div><button class="next" type="button" (click)="nextClick()" [disabled]="!this.currentStep?.canMoveNext">{{ doneNextText }}</button></div>' +
+  ' </div>' +
   '</div>',
   styles: [
     '@import url("https://fonts.googleapis.com/css?family=Lato");',
