@@ -1,3 +1,5 @@
+/* tslint:disable:max-line-length */
+
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgWizardStepComponent} from './NgWizardStep';
 import {NgWizardStepEvent} from './NgWizardStepEvent';
@@ -5,7 +7,11 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
 @Component({
   selector: 'ngWizard',
   template: '<div class="rsWizardMain rsWizardMainOverride">' +
-  '<div><div>{{ currentStep?.title }}</div><div></div></div>' +
+  ' <div>' +
+  '   <div>{{ currentStep?.title }}</div><div>' +
+  '  <div *ngIf="canCancel" class="cancelX" (click)="cancelWizard()" title="Click to cancel wizard" ></div>' +
+  ' </div>' +
+  '</div>' +
   '<div><ng-content></ng-content></div>' +
   '<div>' +
   '<div><button class="back" type="button" (click)="prevClick()" [hidden]="!showBack()" [disabled]="!this.currentStep?.canMoveBack">{{ backText }}</button></div>' +
@@ -32,9 +38,11 @@ export class NgWizardComponent {
   @Input() nextText = 'Next';
   @Input() doneText = 'Done';
   @Input() backText = 'Back';
+  @Input() canCancel = true;
 
   @Output() stepChange = new EventEmitter<NgWizardStepEvent>();
   @Output() done = new EventEmitter<NgWizardStepEvent>();
+  @Output() cancel = new EventEmitter<NgWizardComponent>();
 
   private activeStep = -1;
   private steps: NgWizardStepComponent[] = new Array<NgWizardStepComponent>(0);
@@ -96,6 +104,12 @@ export class NgWizardComponent {
       this.currentStep != null;
   }
 
+  cancelWizard() {
+    if (confirm('Are you sure you wish to exit the wizard?. All data entered will not be saved or processed and lost.')) {
+      this.cancel.emit(this);
+    }
+  }
+
   prevClick() {
     const prevStep = this.activeStep;
     if (this.activeStep > 0) {
@@ -127,3 +141,4 @@ export class NgWizardComponent {
   }
 }
 
+/* tslint:enable:max-line-length  */
