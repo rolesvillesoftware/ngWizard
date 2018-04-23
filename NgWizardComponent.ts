@@ -24,13 +24,15 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
     '.rsWizardMain>div:first-child { flex: 0; font-size: 20px; padding: 3.99vh 3.18vw; color: #2D3B45; font-weight: bold; background: #f2f2f2; border: 1px solid #C7CDD1; border-radius: 3px 3px 0 0; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15); }',
     '.rsWizardMain>div:first-child>div { width: 50%; }',
     '.rsWizardMain>div:nth-child(2) { padding: 23px; }',
-    '.rsWizardMain>div:last-child { flex: 0; padding: 3.42vh 3.36vw; border-top: 1px solid #efefef; }',
-    '.rsWizardMain>div:last-child>div { display: inline-block; width: 50%; text-align: center }',
-    '.rsWizardMain>div:last-child>div:first-child { text-align: left;}',
-    '.rsWizardMain>div:last-child>div:last-child { text-align: right; }',
+    '.rsWizardMain>div:last-child { flex: 0; padding: 3.42vh 3.36vw; border-top: 1px solid #efefef; bottom: 13px; }',
+    '.rsWizardMain>div:last-child>div { display: inline-block; text-align: center;  }',
+    '.rsWizardMain>div:last-child>div:first-child { text-align: left; left: 13px; }',
+    '.rsWizardMain>div:last-child>div:last-child { text-align: right; right: 13px; }',
     '.rsWizardMain button { font-family: "Lato", sans-serif; font-size: 14px; line-height: 17px; border: 1px solid #C4CDD1; border-radius: 2px; background-color: #F5F5F5; color: #2D3B45; padding: 7px 17px; cursor: pointer; }',
     '.rsWizardMain button.next { background-color: #00ACBD; color: #fff; border-color: #008592; }',
-    '.rsWizardMain button:disabled { cursor: not-allowed; opacity: 0.45; }'
+    '.rsWizardMain button:disabled { cursor: not-allowed; opacity: 0.45; }',
+    '.rsWizardMain .cancelX { position: absolute; top: 11px; right: 11px; width: 16px; height: 16px; border: 1px solid #C7CDD1; font-size: 12px; text-align: center; border-radius: 13px; color: #fff; background: #C7CDD1; cursor: pointer; }',
+    '.rsWizardMain .cancelX:hover { color: yellow; }'
   ]
 })
 export class NgWizardComponent {
@@ -104,9 +106,8 @@ export class NgWizardComponent {
   }
 
   cancelWizard() {
-    if (confirm('Are you sure you wish to exit the wizard?. All data entered will not be saved or processed and lost.')) {
-      this.cancel.emit(this);
-    }
+    this.activeStep = 0;
+    this.cancel.emit(this);
   }
 
   prevClick() {
