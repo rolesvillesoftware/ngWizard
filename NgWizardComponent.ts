@@ -103,12 +103,10 @@ export class NgWizardComponent {
     return this.activeStep > 0 &&
       this.currentStep != null;
   }
-
   cancelWizard() {
     this.activeStep = 0;
     this.cancel.emit(this);
   }
-
   prevClick() {
     const prevStep = this.activeStep;
     if (this.activeStep > 0) {
@@ -117,7 +115,6 @@ export class NgWizardComponent {
     this.showHideProperStep();
     this.callEvent(prevStep, this.stepChange);
   }
-
   nextClick() {
     const prevStep = this.activeStep;
     if (this.activeStep === this.lastStep) {
@@ -130,7 +127,6 @@ export class NgWizardComponent {
       this.callEvent(prevStep, this.stepChange);
     }
   }
-
   addStep(step: NgWizardStepComponent) {
     this.steps.push(step);
     if (this.steps.length === 1) {
