@@ -22,7 +22,6 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
     '.rsWizardMain { display: flex; flex-direction: column; font-family: "Lato", sans-serif; background: #fff; font-size: 1em; border: 1px solid #C7CDD1; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15); position: fixed; z-index: 9999999; top: 50%; left: 50%; transform: translate(-50%, -50%); min-height: 41%; max-height: 65%; min-width: 41%; max-width: 65% }',
     '.rsWizardMain>div { flex: 1; overflow: hidden; overflow-y: auto; }',
     '.rsWizardMain>div:first-child { flex: 0; font-size: 20px; padding: 3.99vh 3.18vw; color: #2D3B45; font-weight: bold; background: #f2f2f2; border: 1px solid #C7CDD1; border-radius: 3px 3px 0 0; box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15); }',
-    '.rsWizardMain>div:first-child>div { width: 50%; }',
     '.rsWizardMain>div:nth-child(2) { padding: 23px; }',
     '.rsWizardMain>div:last-child { flex: 0; padding: 3.42vh 3.36vw; border-top: 1px solid #efefef; }',
     '.rsWizardMain>div:last-child>div { display: inline-block; text-align: center; position: absolute; bottom: 13px; }',
@@ -31,7 +30,7 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
     '.rsWizardMain button { font-family: "Lato", sans-serif; font-size: 14px; line-height: 17px; border: 1px solid #C4CDD1; border-radius: 2px; background-color: #F5F5F5; color: #2D3B45; padding: 7px 17px; cursor: pointer; }',
     '.rsWizardMain button.next { background-color: #00ACBD; color: #fff; border-color: #008592; }',
     '.rsWizardMain button:disabled { cursor: not-allowed; opacity: 0.45; }',
-    '.rsWizardMain .cancelX { position: absolute; top: 11px; right: 11px; width: 16px !important; height: 16px; border: 1px solid #C7CDD1; font-size: 12px; text-align: center; border-radius: 13px; color: #fff; background: #C7CDD1; cursor: pointer; }',
+    '.rsWizardMain .cancelX { position: absolute; top: 11px; right: 11px; width: 16px; height: 16px; border: 1px solid #C7CDD1; font-size: 12px; text-align: center; border-radius: 13px; color: #fff; background: #C7CDD1; cursor: pointer; }',
     '.rsWizardMain .cancelX:hover { color: yellow; }'
   ]
 })
