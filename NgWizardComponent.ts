@@ -30,7 +30,7 @@ import {NgWizardStepEvent} from './NgWizardStepEvent';
     '.rsWizardMain button { font-family: "Lato", sans-serif; font-size: 14px; line-height: 17px; border: 1px solid #C4CDD1; border-radius: 2px; background-color: #F5F5F5; color: #2D3B45; padding: 7px 17px; cursor: pointer; }',
     '.rsWizardMain button.next { background-color: #00ACBD; color: #fff; border-color: #008592; }',
     '.rsWizardMain button:disabled { cursor: not-allowed; opacity: 0.45; }',
-    '.rsWizardMain .cancelX { position: absolute; top: 11px; right: 11px; width: 16px; height: 16px; border: 1px solid #C7CDD1; font-size: 12px; text-align: center; border-radius: 13px; color: #fff; background: #C7CDD1; cursor: pointer; }',
+    '.rsWizardMain .cancelX { position: absolute; top: 11px; right: 11px; width: 16px; height: 16px; border: 1px solid #C7CDD1; font-size: 12px; text-align: center; border-radius: 13px; color: #fff; background: #C7CDD1; cursor: pointer; line-height: 13px; }',
     '.rsWizardMain .cancelX:hover { color: yellow; }'
   ]
 })
